@@ -14,6 +14,8 @@ RUN a2enmod rewrite
 # Install phpMyAdmin from the official repository
 RUN apt-get install -y phpmyadmin
 
+# Add file location
+ADD ./app /var/www/html
 
 # Expose ports for Apache
 EXPOSE 80
